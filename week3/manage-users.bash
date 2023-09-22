@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#The purpose of this program is to allow for easy management of the VPN users. 
+
 while getopts 'hdau:c' OPTION ; do
 
 	case "$OPTION" in

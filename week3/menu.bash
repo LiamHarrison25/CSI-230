@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#The purpose of this program is to display a menu for the user to interact with the VPN
+
 
 #The purpose of this function is to output to the user that they have inputed an invalid option
 function invalid_opt ()
@@ -50,9 +52,13 @@ function admin_menu()
 	read -p "Please enter a choice above: " choice
 	
 	case "$choice" in
-		L|l) ps -ef |less
+		L|l) 
+			ps -ef | less
+			read -p "press any button to proceed: " response
 		;;
-		N|n) netstat -an --inet |less
+		N|n) 
+			netstat -an --inet | less
+			read -p "press any button to proceed: " response
 		;;
 		V|v) vpn_menu
 		;;
@@ -83,9 +89,10 @@ function vpn_menu()
 	A|a)
 		bash peer.bash
 		tail -6 wg0.conf |less
+		
 		;;
 	D|d)
-		read -p "please specify a user" user
+		read -p "please specify a user: " user
 		bash manage-users.bash -d -u ${user}
 		read -p "press any button to proceed: " response
 	;;
@@ -118,13 +125,21 @@ function security_menu()
 	echo "[E] Exit"
 	read -p "please enter a choice above:" choice
 	case "$choice" in
-		O|o) netstat -1 |less
+		O|o) 
+			netstat -1 |less
+			read -p "press any button to proceed: " response
 		;;
-		U|u) cat /etc/passwd | grep "x:0" |less
+		U|u) 
+			cat /etc/passwd | grep "x:0" |less
+			read -p "press any button to proceed: " response
 		;;
-		C|c) last -n 10 |less
+		C|c) 
+			last -n 10 |less
+			read -p "press any button to proceed: " response
 		;;
-		L|l) who |less
+		L|l) 
+			who |less
+			read -p "press any button to proceed: " response
 		;;
 		E|e) exit 0
 		;;
