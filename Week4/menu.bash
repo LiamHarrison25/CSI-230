@@ -192,9 +192,7 @@ function block_list_menu()
 			exit 0
 		
 		;;
-	
 	esac
-
 
 
 }

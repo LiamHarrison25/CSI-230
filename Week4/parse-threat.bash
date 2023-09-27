@@ -1,6 +1,6 @@
 #!bin/bash
 
-#extracts ips from emergingthreats.net and creates a firewall
+#The goal of this program is to extract ips from emergingthreats.net and create a firewall
 
 fileName="badIPs.txt"
 
@@ -14,11 +14,13 @@ then
 
 	if [[ "${to_overwrite}" == "N" || "${to_overwrite}" == "" || "${to_overwrite}" == "n"  ]]
 	then
-		echo "Using current badIPs.txt file"
+		echo "Using current badIPs.txt file" #uses the currently downloaded file
 	
 	elif [[ "${to_overwrite}" == "y" ]]
 	then
-		echo "Redownloading the badIps..."
+		echo "Redownloading the badIps..." 
+		
+		#redownloads the file
 		
 		wget http://rules.emergingthreats.net/blockrules/emerging-drop.suricata.rules -O /tmp/emerging-drop.suricata.rules
 		
@@ -36,16 +38,16 @@ egrep '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.0/[0-9]{1,2}' /tmp/emerging-drop.suri
 #firewall ruleset
 for eachIP in $(cat badIPs.txt)
 do
-	echo "block in from  $(eachIP) to any" | tee pf.conf
+	echo "block in from  ${eachIP} to any" | tee pf.conf
 	
-	#echo "iptables -A INPUT -s $(eachIP) -j DROP" | tee -a badIPS.iptables
+	echo "iptables -A INPUT -s ${eachIP} -j DROP" | tee -a badIPS.iptables
 
 done
 
-#switches for iptables, cisco, windows firewall, and Mac OS X. 
 
-function getopts()
-{
+
+
+#switches for iptables, cisco, windows firewall, and Mac OS X. 
 
 while getopts 'hdau:c' OPTION ; do
 
@@ -79,11 +81,5 @@ while getopts 'hdau:c' OPTION ; do
 	esac
 
 done
-
-}
-
-
-
-
 
 
