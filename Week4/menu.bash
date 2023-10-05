@@ -173,7 +173,7 @@ function block_list_menu()
 	case "$choice" in
 		c|C)
 			#Cisco blocklist generator
-		
+			bash parse-threat.bash 
 		;;
 		d|D)
 			#Domain URL blocklist generator
