@@ -1,0 +1,620 @@
+"EventID","MachineName","Data","Index","Category","CategoryNumber","EntryType","Message","Source","ReplacementStrings","InstanceId","TimeGenerated","TimeWritten","UserName","Site","Container"
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2847021","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:12:28 PM","10/25/2023 3:12:28 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2847020","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:12:28 PM","10/25/2023 3:12:28 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2847019","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:12:20 PM","10/25/2023 3:12:20 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2847018","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:12:20 PM","10/25/2023 3:12:20 PM",,,
+"4624","LAPTOP-2IGPQAFN","System.Byte[]","2847016","(12544)","12544","SuccessAudit","An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		%%1843
+	Elevated Token:		%%1842
+
+Impersonation Level:		%%1833
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3e7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x4b8
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Microsoft-Windows-Security-Auditing","System.String[]","4624","10/25/2023 3:11:57 PM","10/25/2023 3:11:57 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847015","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847014","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847013","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847012","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847011","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847010","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847009","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847008","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847007","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847006","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847005","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847004","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847003","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847002","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847001","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2847000","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846999","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846998","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846997","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846996","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:10 PM","10/25/2023 3:11:10 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846995","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846994","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846993","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846992","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846991","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846990","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1001
+	Account Name:		Liam Harrison
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846989","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846988","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-501
+	Account Name:		Guest
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846987","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-503
+	Account Name:		DefaultAccount
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"4798","LAPTOP-2IGPQAFN","System.Byte[]","2846986","(13824)","13824","SuccessAudit","A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		LAPTOP-2IGPQAFN$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3e7
+
+User:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-500
+	Account Name:		Administrator
+	Account Domain:		LAPTOP-2IGPQAFN
+
+Process Information:
+	Process ID:		0x1c60
+	Process Name:		C:\Windows\System32\svchost.exe","Microsoft-Windows-Security-Auditing","System.String[]","4798","10/25/2023 3:11:08 PM","10/25/2023 3:11:08 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2846985","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:11:03 PM","10/25/2023 3:11:03 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2846984","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:11:03 PM","10/25/2023 3:11:03 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2846983","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:11:03 PM","10/25/2023 3:11:03 PM",,,
+"5379","LAPTOP-2IGPQAFN","System.Byte[]","2846982","(13824)","13824","SuccessAudit","Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-1585633599-1120143714-3241838685-1002
+	Account Name:		Liam
+	Account Domain:		LAPTOP-2IGPQAFN
+	Logon ID:		0x2fa7b
+	Read Operation:		%%8100
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","Microsoft-Windows-Security-Auditing","System.String[]","5379","10/25/2023 3:11:03 PM","10/25/2023 3:11:03 PM",,,
