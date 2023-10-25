@@ -12,8 +12,3 @@ $searchInput = Read-Host -Prompt "Please select the string you want to search fo
 # Print the log corresponding to the user input
 Get-EventLog -LogName $input -Newest 40 | where {$_.Message -ilike "*$searchInput*" } | Export-Csv -NoTypeInformation `
 -Path "D:\Projects\Powershell Projects\CSI-230\CSI-230\Week8\Logs.csv"
-
-
-
-#TODO: Create a prompt that allows the user to specify a search string
-# Find a string from your event logs to search on
