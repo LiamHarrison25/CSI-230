@@ -58,12 +58,30 @@ function log_check()
         view_log -logToSearch $logToSearch
 
     }
+    else
+    {
+        write-host -BackgroundColor red -ForegroundColor white "The log specified doesn't exist."
+
+        sleep 2
+
+        select_log
+    }
 }
 
 function view_log()
 {
+    cls
+  
+
+    #Get the logs
+    Get-EventLog -Log $logToSearch -Newest 10 -after "1/18/2023"
 
 
+    # pause the screen and wait until the user is ready to proceed
+    read-host -Prompt "Press enter when you are done"
+
+    # go back to select_log
+    select_log
 }
 
 select_log # runs the select log
