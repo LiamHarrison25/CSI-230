@@ -1,7 +1,4 @@
-﻿# Lists all registered services
-# prompts the user to select if they want to view all services, running, or stopped
-# Provides and option to quit the program
-
+﻿#Lists all event logs
 
 function select_log()
 {
