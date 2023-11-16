@@ -16,10 +16,18 @@
 
 function selectDirectory()
 {
-    Write-Host "Recommended Directory: D:\Projects\Powershell Projects\CSI-230\CSI-230\Week11\"
+cls
+    Write-Host "Recommended Directory: D:\Projects\Powershell Projects\CSI-230\CSI-230\Week11\files"
     $directory = read-host -Prompt "Please enter the directory to put the data in"
 
     selectOption
+}
+
+function hashFile()
+{
+    $hash = Get-FileHash -path $directory/*csv -Algorithm SHA256
+
+    $hash | Out-File $directory\checksums.txt
 }
 
 function selectOption()
@@ -36,6 +44,7 @@ function selectOption()
     Write-Host "-Stop unsafe process"
     Write-Host "-Stop unsafe powershell job"
     Write-Host "-Delete unsafe item"
+    Write-Host "-Zip and hash files"
 
     $userInput = Read-Host -Prompt "Please enter an option from the list above to view or 'q' to quit the program"
 
@@ -56,31 +65,31 @@ function checkOption()
     {
         "Running Processes" 
         {
-            $fullDirectory = Join-Path -Path $directory -ChildPath "processes.csv"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\processes.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the running processes. "
             Get-Process | Export-Csv -Path "$fullDirectory"
         }
         "All registered services" 
         {
-            $fullDirectory = Join-Path -Path $directory -ChildPath "services.csv"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\services.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the registered services. "
             Get-Service | Export-Csv -Path "$fullDirectory"
         }
         "All TCP network sockets" 
         {
-            $fullDirectory = Join-Path -Path $directory -ChildPath "networkSockets.csv"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\networkSockets.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the TCP network sockets. "
             Get-NetTCPConnection | Export-Csv -Path "$fullDirectory"
         }
         "All user account information" 
         {
-            $fullDirectory = Join-Path -Path $directory -ChildPath "userInfo.csv"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\userInfo.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the user account information. "
             Get-LocalUser | Export-Csv -Path "$fullDirectory"
         }
         "All network adapter configuration information" 
         {
-            $fullDirectory = Join-Path -Path $directory -ChildPath "networkAdapter.csv"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\networkAdapter.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the network adapter configuration information. "
             Get-NetAdapter | Export-Csv -Path "$fullDirectory"
         }
@@ -95,7 +104,7 @@ function checkOption()
 
             # Stopping calculator for example. Maybe someone embedded malicious code into calc.exe
 
-            Stop-Process -FilePath C:\Windows\System32\calc.exe
+            Stop-Process -Name CalculatorApp
 
         }
         "Stop unsafe powershell job" 
@@ -111,6 +120,13 @@ function checkOption()
             remove-item -Path "D:\Project\Powershell Projects\CSI-230\CSI-230\Week11\unsafeFile.txt" -Force
 
         }
+        "Zip and hash files"
+        {
+            write-Host -BackgroundColor Green -ForegroundColor white "Please wait, zipping and hashing the files"
+
+            zipFiles 
+
+        }
         default 
         {
             Write-Host "Please enter a valid option"
@@ -122,7 +138,7 @@ function checkOption()
     }
 
     # pause the screen and wait until the user is ready to proceed
-    read-host -Prompt "Press enter when you are done"
+    read-host -Prompt "Task was successful. Press enter when you are done"
 
     selectOption
 
@@ -132,6 +148,13 @@ function checkOption()
 function zipFiles()
 {
     #//TODO: 
+
+    $zipDirectory = "$directory\files.zip"
+
+    Compress-Archive -Path $directory\* -DestinationPath $zipDirectory -Force
+
+    hashFile
+
 }
 
 selectDirectory
