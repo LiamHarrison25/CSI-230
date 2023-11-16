@@ -14,4 +14,119 @@
 # Get-Job and Stop-Job //used to find and stop running powershell jobs
 # Remove-Item //used to delete an item. Can be used to delete an "unsafe" file (Create a file and then delete it)
 
+function selectOption()
+{
+    cls
+    
+    Write-Host " *OPTIONS: "
+    Write-Host "-Running Processes"
+    Write-Host "-All registered services" 
+    Write-Host "-All TCP network sockets"
+    Write-Host "-All user account information"
+    Write-Host "-All network adapter configuration information"
+    Write-Host "-Stop Computer"
+    Write-Host "-Stop unsafe process"
+    Write-Host "-Stop unsafe powershell job"
+    Write-Host "-Delete unsafe item"
 
+    $userInput = Read-Host -Prompt "Please enter an option from the list above to view or 'q' to quit the program"
+
+    if($userInput -match "^[qQ]$")
+    {
+        break
+    }
+
+    checkOption -option $userInput
+}
+
+
+function checkOption()
+{
+    Param([string]$option)
+
+    Switch ($option)
+    {
+        "Running Processes" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the running processes. "
+            Get-Process | Export-Csv -Path "$directory" + "\processes.csv"
+        }
+        "All registered services" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the registered services. "
+            Get-Service | Export-Csv -Path "$directory"
+        }
+        "All TCP network sockets" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the TCP network sockets. "
+            Get-NetTCPConnection | Export-Csv -Path "$directory"
+        }
+        "All user account information" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the user account information. "
+            Get-LocalUser | Export-Csv -Path "$directory"
+        }
+        "All network adapter configuration information" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the network adapter configuration information. "
+            Get-NetAdapter | Export-Csv -Path "$directory"
+        }
+        "Stop Computer" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Powering down the computer. "
+            Stop-Computer
+        }
+        "Stop unsafe process" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, attempting to shut down the harmful program. "
+
+            # Stopping calculator for example. Maybe someone embedded malicious code into calc.exe
+
+            Stop-Process -FilePath C:\Windows\System32\calc.exe
+
+        }
+        "Stop unsafe powershell job" 
+        {
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, attempting to shut down the harmful powershell job. "
+            Stop-Job "UnsafeProcessExample"
+
+        }
+        "Delete unsafe item" 
+        { 
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, attempting to delete the unsafe item. "
+
+            remove-item -Path "D:\Project\Powershell Projects\CSI-230\CSI-230\Week11\unsafeFile.txt" -Force
+
+        }
+        default 
+        {
+            Write-Host "Please enter a valid option"
+                
+            sleep 2
+
+            selectOption
+        }
+    }
+
+    # pause the screen and wait until the user is ready to proceed
+    read-host -Prompt "Press enter when you are done"
+
+    selectOption
+
+
+}
+
+
+function selectDirectory()
+{
+    $directory = read-host -Prompt "Please enter the directory to put the data in"
+}
+
+function zipFiles()
+{
+    #//TODO: 
+}
+
+selectDirectory
+
+selectOption
