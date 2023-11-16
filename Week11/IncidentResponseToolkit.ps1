@@ -14,6 +14,14 @@
 # Get-Job and Stop-Job //used to find and stop running powershell jobs
 # Remove-Item //used to delete an item. Can be used to delete an "unsafe" file (Create a file and then delete it)
 
+function selectDirectory()
+{
+    Write-Host "Recommended Directory: D:\Projects\Powershell Projects\CSI-230\CSI-230\Week11\"
+    $directory = read-host -Prompt "Please enter the directory to put the data in"
+
+    selectOption
+}
+
 function selectOption()
 {
     cls
@@ -48,28 +56,33 @@ function checkOption()
     {
         "Running Processes" 
         {
+            $fullDirectory = Join-Path -Path $directory -ChildPath "processes.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the running processes. "
-            Get-Process | Export-Csv -Path "$directory" + "\processes.csv"
+            Get-Process | Export-Csv -Path "$fullDirectory"
         }
         "All registered services" 
         {
+            $fullDirectory = Join-Path -Path $directory -ChildPath "services.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the registered services. "
-            Get-Service | Export-Csv -Path "$directory"
+            Get-Service | Export-Csv -Path "$fullDirectory"
         }
         "All TCP network sockets" 
         {
+            $fullDirectory = Join-Path -Path $directory -ChildPath "networkSockets.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the TCP network sockets. "
-            Get-NetTCPConnection | Export-Csv -Path "$directory"
+            Get-NetTCPConnection | Export-Csv -Path "$fullDirectory"
         }
         "All user account information" 
         {
+            $fullDirectory = Join-Path -Path $directory -ChildPath "userInfo.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the user account information. "
-            Get-LocalUser | Export-Csv -Path "$directory"
+            Get-LocalUser | Export-Csv -Path "$fullDirectory"
         }
         "All network adapter configuration information" 
         {
+            $fullDirectory = Join-Path -Path $directory -ChildPath "networkAdapter.csv"
             write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the network adapter configuration information. "
-            Get-NetAdapter | Export-Csv -Path "$directory"
+            Get-NetAdapter | Export-Csv -Path "$fullDirectory"
         }
         "Stop Computer" 
         {
@@ -116,17 +129,9 @@ function checkOption()
 
 }
 
-
-function selectDirectory()
-{
-    $directory = read-host -Prompt "Please enter the directory to put the data in"
-}
-
 function zipFiles()
 {
     #//TODO: 
 }
 
 selectDirectory
-
-selectOption
