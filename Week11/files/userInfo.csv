@@ -1,0 +1,8 @@
+#TYPE Microsoft.PowerShell.Commands.LocalUser
+"AccountExpires","Description","Enabled","FullName","PasswordChangeableDate","PasswordExpires","UserMayChangePassword","PasswordRequired","PasswordLastSet","LastLogon","Name","SID","PrincipalSource","ObjectClass"
+,"Built-in account for administering the computer/domain","False","",,,"True","True",,"9/25/2021 9:15:37 PM","Administrator","S-1-5-21-1585633599-1120143714-3241838685-500","Local","User"
+,"A user account managed by the system.","False","",,,"True","False",,,"DefaultAccount","S-1-5-21-1585633599-1120143714-3241838685-503","Local","User"
+,"Built-in account for guest access to the computer/domain","False","",,,"False","False",,,"Guest","S-1-5-21-1585633599-1120143714-3241838685-501","Local","User"
+,"","True","","1/5/2022 12:45:45 PM",,"True","False","1/5/2022 12:45:45 PM","11/29/2023 10:25:38 AM","Liam","S-1-5-21-1585633599-1120143714-3241838685-1002","Local","User"
+,"","True","Liam Harrison","3/13/2023 10:33:13 AM",,"True","False","3/13/2023 10:33:13 AM","11/27/2021 11:03:02 PM","Liam Harrison","S-1-5-21-1585633599-1120143714-3241838685-1001","MicrosoftAccount","User"
+,"A user account managed and used by the system for Windows Defender Application Guard scenarios.","False","","7/10/2021 8:56:52 PM","8/21/2021 8:56:52 PM","True","True","7/10/2021 8:56:52 PM",,"WDAGUtilityAccount","S-1-5-21-1585633599-1120143714-3241838685-504","Local","User"
