@@ -42,8 +42,8 @@ function selectOption()
     Write-Host "-All network adapter configuration information"
     Write-Host "-Stop Computer"
     Write-Host "-Stop unsafe process"
-    Write-Host "-Stop unsafe powershell job"
-    Write-Host "-Delete unsafe item"
+    Write-Host "-Host Information"
+    Write-Host "-DNS Client Cache"
     Write-Host "-Zip and hash files"
 
     $userInput = Read-Host -Prompt "Please enter an option from the list above to view or 'q' to quit the program"
@@ -107,18 +107,18 @@ function checkOption()
             Stop-Process -Name CalculatorApp
 
         }
-        "Stop unsafe powershell job" 
+        "Host Information" 
         {
-            write-host -BackgroundColor Green -ForegroundColor white "Please wait, attempting to shut down the harmful powershell job. "
-            Stop-Job "UnsafeProcessExample"
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\hostInformation.csv"
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the host information. "
+            Get-Host | Export-Csv -Path $fullDirectory
 
         }
-        "Delete unsafe item" 
+        "DNS Client Cache" 
         { 
-            write-host -BackgroundColor Green -ForegroundColor white "Please wait, attempting to delete the unsafe item. "
-
-            remove-item -Path "D:\Project\Powershell Projects\CSI-230\CSI-230\Week11\unsafeFile.txt" -Force
-
+            $fullDirectory = Join-Path -Path $directory -ChildPath "\DnsClientCache.csv"
+            write-host -BackgroundColor Green -ForegroundColor white "Please wait, it may take a few moments to retrieve the DNS Client Cache. "
+            Get-DnsClientCache | Export-Csv -Path $fullDirectory
         }
         "Zip and hash files"
         {
